@@ -1,7 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
+
+// Cấu hình dotenv không ghi đè biến môi trường hệ thống (Render)
+require('dotenv').config({ override: false });
 
 const employeeRoutes = require('./routes/employeeRoutes');
 
